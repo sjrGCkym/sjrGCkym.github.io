@@ -23,18 +23,18 @@ address：上海交通大学软件大楼5209
 
 2017.7-2017.8     吉大正元公司PKI算法组
 
-2016-至今         上海交通大学 信息内容分析国家重点实验室
+2016.6-至今        上海交通大学 信息内容分析国家重点实验室
 
 
 ### 竞赛/荣誉
 
-2014 第30届中国数学奥林匹克(CMO)竞赛银牌
+2014.12 第30届中国数学奥林匹克(CMO)竞赛银牌
 
-2018 第11届全国大学生信息安全竞赛国家一等奖
+2018.6  第11届全国大学生信息安全竞赛国家一等奖
 
-2019 中国互联网发展基金会网络安全奖学金
+2019.9  中国互联网发展基金会网络安全奖学金
 
 ### 论文
 
-Chen Y R, Sha J R, Zhou Z H. IOV Privacy Protection System Based on Double-Layered Chains[J]. Wireless Communications and Mobile Computing, 2019, 2019.
+*Chen Y R, Sha J R, Zhou Z H. IOV Privacy Protection System Based on Double-Layered Chains[J]. Wireless Communications and Mobile Computing, 2019, 2019.
 
