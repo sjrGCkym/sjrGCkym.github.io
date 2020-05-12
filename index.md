@@ -1,39 +1,30 @@
 ## 沙金锐
 
 网络空间安全
+
 上海交通大学
 
 Email：sjrgckym@sjtu.edu.cn
+
 address：上海交通大学软件大楼5209
 
-### Markdown
+### 研究方向
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+公钥密码学/隐私保护/零知识证明
 
-```markdown
-Syntax highlighted code block
+### 学位/学术经历
 
-# Header 1
-## Header 2
-### Header 3
+2019-至今         上海交通大学 网络空间安全 硕士
+2015-2019         上海交通大学 信息安全 学士
 
-- Bulleted
-- List
+2016.6-至今       上海交通大学 信息内容分析国家重点实验室
+2019.7-2019.8     中科院信工所 信息安全国家重点实验室暑期学校
+2017.7-2017.8     吉大正元公司
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+### 竞赛/荣誉
+2014 第30届中国数学奥林匹克(CMO)竞赛银牌
+2018 第11届全国大学生信息安全竞赛国家一等奖
+2019 中国互联网发展基金会网络安全奖学金
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sjrGCkym/sjrGCkym.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
