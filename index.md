@@ -1,50 +1,19 @@
-## 沙金锐
-
-网络空间安全 上海交通大学
-
-Email：sjrgckym@sjtu.edu.cn
-
-address：上海交通大学软件大楼5209
-
-### 研究方向
-
-公钥密码学/隐私保护/零知识证明
-
-### 教育经历
-
-2019-至今         上海交通大学 网络空间安全 硕士
-
-2015-2019         上海交通大学 信息安全 学士
+## Jinrui Sha
+Shanghai JiaoTong University
+School of Cyber Science and Engineering
 
 
-### 学术经历
+### Biography
 
-2019.7-2019.8     中科院信工所 信息安全国家重点实验室暑期学校
+### Interests
 
-2017.7-2017.8     吉大正元公司PKI算法组
+### Education
 
-2016.6-至今        上海交通大学 信息内容分析国家重点实验室
+### Publications
+
+### Awards
+
+### About me
 
 
-### 竞赛/荣誉
-
-2014.12 第30届中国数学奥林匹克(CMO)竞赛银牌
-
-2018.6  第11届全国大学生信息安全竞赛国家一等奖
-
-2019.9  中国互联网发展基金会网络安全奖学金
-
-### 论文
-
-*Chen Y R, Sha J R, Zhou Z H. IOV Privacy Protection System Based on Double-Layered Chains[J]. Wireless Communications and Mobile Computing, 2019, 2019.
-
-### 关于我
-
-我是上海交通大学网络空间安全的在读硕士，本科毕业于上海交通大学信息安全专业。我的研究方向是隐私保护与零知识证明。目前在 NIZK in common reference string 和 QAPs-based zk-SNARKs方面有一定的研究。
-
-中学期间，于2013,2014年两年获得全国高中数学联赛省级一等奖，并在2014年进入吉林省省队，参加第30届中国数学奥林匹克(CMO)冬令营获得银牌。并参加北方数学邀请赛，数学奥林匹克希望联盟等多个国家级重要比赛获得一等奖。
-
-本科期间，自2016年进入信息安全学院信息内容分析国家重点实验室是从范磊副教授完成密码学相关的工作，2017年进入吉林省吉大正元公司PKI算法组进行实习。于2017,2018年参加全国大学生信息安全竞赛，在2017年中完成项目《基于图数据库的可搜索加密系统》获得全国二等奖，2018年基于PSI设计了完成项目《基于区块链的隐私保护基因数据分析系统》获得全国一等奖。在2019年发表论文《IOV Privacy Protection System Based on Double-Layered Chains》录用至《Wireless Communications and Mobile Computing》期刊，并完成了《Memory Hard Proof of Work: Design and Analysis》一文。同时也参加了全国大学生数学建模竞赛以及美国大学生数学建模竞赛等比赛获得奖项。
-
-研究生期间，于2019年6月参加了中科院信工所举办的信息安全国家重点实验室暑期学校，并在2019年9月获得中国互联网发展基金会网络安全奖学金。
 
