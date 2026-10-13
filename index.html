@@ -22,8 +22,7 @@ h1 { margin-bottom: 19px; font-size: 32px; line-height: 1.3; font-weight: bold; 
 .profile-text p { margin: 16px 0; line-height: 1.4; }
 .position { font-size: 22px; }
 .affiliation { margin-bottom: 19px !important; }
-.portrait { display: flex; flex-direction: column; justify-content: center; align-items: center; justify-self: center; gap: 11px; width: min(280px, 100%); aspect-ratio: 1; border: 1px solid #c4c4c4; background: #f4f4f4; color: #777; font-family: Arial, "Microsoft YaHei", sans-serif; font-size: 13px; }
-.portrait svg { width: 82px; height: 92px; }
+.portrait { display: block; justify-self: center; width: min(280px, 100%); height: auto; border: 1px solid #c4c4c4; }
 .nav { line-height: 1.9; margin: 10px 0 21px; font-size: 16px; font-weight: bold; text-align: center; }
 .nav span { display: inline-block; margin-right: 7px; white-space: nowrap; }
 .section { margin-bottom: 25px; }
@@ -50,10 +49,9 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
 @media (max-width: 650px) {
   body { font-size: 16px; line-height: 1.7; }
   .page { width: calc(100% - 24px); margin-top: 24px; }
-  .profile { grid-template-columns: 1fr 112px; gap: 20px; min-height: 0; align-items: center; padding-bottom: 10px; }
+  .profile { grid-template-columns: minmax(0, 1fr) 112px; gap: 20px; min-height: 0; align-items: center; padding-bottom: 10px; }
   h1 { font-size: 29px; }
-  .portrait { width: 112px; height: 112px; gap: 7px; font-size: 11px; }
-  .portrait svg { width: 56px; height: 64px; }
+  .portrait { width: 112px; height: auto; }
   .profile-text { min-width: 0; }
   .profile-text p { font-size: 14px; overflow-wrap: anywhere; }
   .profile-text .position { font-size: 16px; }
@@ -64,7 +62,7 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
   ul { padding-left: 22px; }
   .paper-links { white-space: normal; }
 }
-@media (max-width: 360px) { .profile { gap: 12px; grid-template-columns: 1fr 88px; } .portrait { width: 88px; height: 88px; font-size: 9px; } h1 { font-size: 25px; } }
+@media (max-width: 360px) { .profile { gap: 12px; grid-template-columns: minmax(0, 1fr) 88px; } .portrait { width: 88px; height: auto; } h1 { font-size: 25px; } }
 @media print { body { font-size: 12pt; } .page { width: 100%; margin: 0; } .nav, .skip { display: none; } .section { break-inside: avoid; } a { color: #111; } }
 </style>
 </head>
@@ -81,11 +79,7 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
         邮箱：<a href="mailto:sjrgckym@nuist.edu.cn">sjrgckym@nuist.edu.cn</a><br>
         知乎：<a href="https://www.zhihu.com/search?type=content&amp;q=%E6%B2%99%E9%87%91%E9%94%90" target="_blank" rel="noopener noreferrer">沙金锐</a></p>
     </div>
-    <!-- 有照片后，可将整个 portrait 占位块替换为 img，并设置相同宽高。 -->
-    <div class="portrait" role="img" aria-label="个人照片待添加">
-      <svg viewBox="0 0 82 92" aria-hidden="true"><circle cx="41" cy="26" r="20" fill="#c7c7c7"/><path d="M7 90v-12c0-20 15-32 34-32s34 12 34 32v12" fill="#c7c7c7"/></svg>
-      <span>个人照片 · 待添加</span>
-    </div>
+    <img class="portrait" src="./portrait.jpg" alt="沙金锐的照片" width="960" height="1130" decoding="async">
   </header>
   <nav class="nav" aria-label="学术主页导航">
   <span>[<a href="./index.html#biography">个人简介</a>]</span>
