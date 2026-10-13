@@ -2,663 +2,132 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="sjrGCkym 的个人空间：记录学习、展示作品，收集日常里的灵感。">
-  <meta name="theme-color" content="#f8f8f4">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="sjrGCkym · 个人主页">
-  <meta property="og:description" content="保持好奇，让想法发生。欢迎来到我的个人空间。">
-  <meta property="og:url" content="https://sjrGCkym.github.io/">
-  <title>sjrGCkym · 个人主页</title>
-  <link rel="canonical" href="https://sjrGCkym.github.io/">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2218%22%20fill%3D%22%237560bb%22%2F%3E%3Cpath%20d%3D%22M21%2022h13c8%200%208%2012%200%2012h-5c-8%200-8%2012%200%2012h14%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M43%2016h8v8m0-8-11%2011%22%20fill%3D%22none%22%20stroke%3D%22%23d5e2bd%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E%0A" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="sjrGCkym 的中文学术主页：个人简介、研究方向、论文、教学与学术服务。">
+  <title>学术主页 · sjrGCkym</title>
+  <link rel="canonical" href="https://sjrgckym.github.io/">
   <style>
-/* 主要配色和布局参数：修改这里即可调整整站风格。 */
-:root {
-  --bg: #f8f8f4;
-  --surface: #fff;
-  --ink: #292a2e;
-  --muted: #74756f;
-  --accent: #7560b8;
-  --accent-hover: #604ba0;
-  --line: #e5e5de;
-  --soft-purple: #eeeaf6;
-  --soft-green: #eaf0e5;
-  --radius: 18px;
-  color-scheme: light;
-  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
-  color: var(--ink);
-  background: var(--bg);
-}
-:root[data-theme="dark"] {
-  --bg: #191a1e;
-  --surface: #23242a;
-  --ink: #eeeee8;
-  --muted: #b3b4ac;
-  --accent: #b6a2f0;
-  --accent-hover: #c9b8ff;
-  --line: #38393f;
-  --soft-purple: #302b3e;
-  --soft-green: #28332b;
-  color-scheme: dark;
-}
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 108px; }
-body { margin: 0; font-size: 15px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
-body.modal-open { overflow: hidden; }
-button, input { font: inherit; }
-button, a { -webkit-tap-highlight-color: transparent; }
-button { cursor: pointer; }
-a { color: inherit; text-decoration: none; }
-button { color: inherit; }
-svg { display: block; }
-[hidden] { display: none !important; }
-::selection { color: #2c2542; background: #dfd3f7; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
-.container { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
-.skip-link { position: fixed; z-index: 100; top: 8px; left: 12px; padding: 10px 20px; background: var(--ink); color: var(--bg); border-radius: 8px; transform: translateY(-160%); }
-.skip-link:focus { transform: translateY(0); }
-.site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid var(--line); background: var(--bg); }
-.header-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.brand { display: inline-flex; align-items: center; gap: 11px; font-size: 20px; font-weight: 700; letter-spacing: -.65px; white-space: nowrap; }
-.brand-dot, .footer-brand span { color: var(--accent); }
-.brand-mark { position: relative; display: grid; place-content: center; width: 34px; height: 34px; background: var(--accent); color: var(--bg); border-radius: 10px; font-family: Georgia, serif; font-size: 32px; font-weight: normal; line-height: 1; }
-.brand-mark > span { position: absolute; top: 3px; right: 3px; font: 12px system-ui, sans-serif; }
-.site-nav { display: flex; align-items: center; gap: 34px; margin-left: auto; margin-right: auto; }
-.site-nav a { position: relative; padding: 28px 2px; font-size: 14px; color: var(--muted); transition: color .2s; }
-.site-nav a:hover, .site-nav a.active { color: var(--ink); }
-.site-nav a.active::after { content: ""; position: absolute; bottom: 18px; left: calc(50% - 2px); width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
-.header-actions { display: flex; align-items: center; gap: 18px; }
-.icon-button { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid transparent; border-radius: 50%; background: transparent; transition: background .2s; }
-.icon-button:hover { background: var(--soft-purple); }
-.header-github { font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
-.header-github span { margin-left: 5px; color: var(--accent); }
-.menu-toggle, .sun-icon { display: none; }
-[data-theme="dark"] .sun-icon { display: block; }
-[data-theme="dark"] .moon-icon { display: none; }
-.hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 80px; align-items: center; padding-top: 88px; padding-bottom: 83px; }
-.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 25px; font-size: 13px; letter-spacing: 1px; }
-.tiny-star { color: var(--accent); font-size: 25px; line-height: 1; }
+html { scroll-padding-top: 16px; }
+body { margin: 8px; background: #fff; color: #000; font-family: "Times New Roman", "Songti SC", SimSun, serif; font-size: 18px; line-height: 1.4; }
+.page { width: 70%; margin: 18px auto 40px; }
+a { color: #0000ee; text-decoration: underline; text-underline-offset: 1px; }
+a:visited { color: #0000ee; }
+a:hover { color: #c00000; }
+a:focus-visible { outline: 2px solid #0000cc; outline-offset: 4px; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { margin-bottom: 26px; font-size: clamp(45px, 4.6vw, 64px); line-height: 1.32; font-weight: 750; letter-spacing: -2.2px; }
-h1 > span { color: var(--accent); }
-.hero-description { color: var(--muted); font-size: 15px; line-height: 2; margin-bottom: 30px; }
-.hero-actions { display: flex; align-items: center; gap: 29px; }
-.button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; min-height: 48px; border: 0; border-radius: 7px; padding: 12px 22px; font-size: 14px; font-weight: 500; transition: background .2s, transform .2s; }
-.button-primary { color: #fff; background: #7560b8; }
-.button-primary:hover { background: #604ba0; transform: translateY(-2px); }
-.button span { font-size: 19px; line-height: 1; }
-.text-link { display: inline-flex; align-items: center; gap: 14px; padding: 5px 0; border: 0; background: transparent; font-size: 13px; white-space: nowrap; }
-.text-link:hover { color: var(--accent); }
-.text-link > span { font-size: 20px; }
-.hero-signoff { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); margin-top: 40px; letter-spacing: .2px; }
-.status-dot { display: inline-block; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: #6a9070; }
-.hero-art { position: relative; border: 1px solid #e2dfd5; border-radius: 20px; background: #f0efe8; color: #403b45; transform: rotate(2deg); }
-.art-topline, .art-bottomline { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 10px; padding: 20px 25px; letter-spacing: 1px; }
-.art-topline { border-bottom: 1px solid #dddcd3; }
-.art-topline > span:first-child { display: inline-flex; align-items: center; gap: 6px; }
-.art-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #7560b8; }
-.orbital-art { width: 100%; height: auto; }
-.art-bottomline { padding-top: 0; padding-bottom: 18px; }
-.art-bottomline > span:last-child { font-size: 22px; }
-.art-sticker { position: absolute; right: -19px; bottom: 54px; display: inline-flex; align-items: center; gap: 9px; padding: 10px 18px; border: 1px solid #d2debf; border-radius: 6px; background: #deebcb; font-size: 12px; color: #394637; transform: rotate(-7deg); box-shadow: 0 3px 0 #2a302709; }
-.art-sticker > span { font-size: 21px; }
-.values-strip { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 27px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.values-strip > span:not(.strip-star) { font-size: 17px; font-weight: 500; }
-.values-strip small { margin-left: 12px; font-family: system-ui, sans-serif; font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: 1.6px; }
-.strip-star { color: #b7b0c7; font-size: 20px; }
-.section { padding-top: 92px; padding-bottom: 92px; }
-.section-label { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; letter-spacing: 1px; margin-bottom: 19px; }
-.section-label > span { color: var(--accent); font-family: system-ui, sans-serif; font-size: 10px; }
-h2 { margin-bottom: 25px; font-size: 34px; line-height: 1.5; font-weight: 650; letter-spacing: -1px; }
-.about-section { display: grid; grid-template-columns: 1.3fr 1fr; gap: 125px; align-items: center; }
-.about-copy > p:not(.section-label) { max-width: 535px; color: var(--muted); font-size: 14px; line-height: 2.05; margin-bottom: 15px; }
-.about-copy strong { color: var(--ink); font-weight: 500; }
-.interest-tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 27px; }
-.interest-tags span { border: 1px solid var(--line); padding: 5px 11px; border-radius: 5px; font-size: 11px; color: var(--muted); }
-.now-card { align-self: stretch; display: flex; flex-direction: column; padding: 26px 30px 19px; background: var(--soft-green); border-radius: var(--radius); }
-.now-heading { display: flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: .5px; }
-.now-heading > span:last-child { font-size: 19px; margin-left: auto; }
-.now-illustration { display: flex; justify-content: center; padding: 17px 0 8px; }
-.now-card h3 { text-align: center; font-size: 19px; font-weight: 500; margin: 8px 0; }
-.now-card p { text-align: center; color: var(--muted); font-size: 12px; line-height: 1.9; margin-bottom: 21px; }
-.now-footer { display: flex; justify-content: space-between; margin-top: auto; padding-top: 13px; border-top: 1px solid #aab69d40; font-size: 10px; color: var(--muted); }
-.projects-section { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
-.section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
-.section-heading h2 { margin-bottom: 0; }
-.section-heading .text-link { margin-bottom: 6px; }
-.section-intro { margin: 18px 0 34px; color: var(--muted); font-size: 13px; }
-.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.project-card { overflow: hidden; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
-.project-visual { position: relative; height: 240px; overflow: hidden; color: #3d3546; }
-.visual-index { position: absolute; left: 20px; top: 18px; z-index: 2; font-family: system-ui, sans-serif; font-size: 8px; letter-spacing: 1.5px; opacity: .7; }
-.visual-notes { background: #ece8f5; }
-.paper { position: absolute; width: 154px; height: 163px; left: calc(50% - 77px); top: 51px; border: 1px solid #d5cede; border-radius: 3px; }
-.paper-back { transform: rotate(-13deg) translate(-10px, 0); background: #c8bbdf; }
-.paper-front { padding: 21px 18px; transform: rotate(5deg); background: #faf9f6; box-shadow: 0 8px 15px #6d547410; }
-.paper-title { font-size: 12px; font-weight: 500; line-height: 1.7; }
-.paper-line { display: block; width: 87px; height: 2px; margin-top: 10px; background: #ddd9e2; }
-.paper-line.short { width: 59px; margin-top: 6px; }
-.paper-star { position: absolute; right: 16px; bottom: 28px; color: #8a71b6; font-size: 38px; line-height: 1; }
-.paper-page { position: absolute; left: 18px; bottom: 15px; font: 7px system-ui, sans-serif; letter-spacing: 1px; color: #8e8897; }
-.visual-spark { position: absolute; right: 38px; top: 48px; font-size: 24px; color: #9079bd; }
-.visual-tools { background: #e6ede1; }
-.mini-window { position: absolute; left: 12%; right: 12%; top: 58px; background: #333d36; border: 1px solid #3b493e; border-radius: 7px; transform: rotate(-4deg); box-shadow: 0 10px 15px #3c4f3c12; }
-.window-bar { display: flex; align-items: center; gap: 4px; height: 29px; padding: 0 11px; border-bottom: 1px solid #ffffff14; }
-.window-bar i { width: 5px; height: 5px; border-radius: 50%; background: #afbbb0; }
-.window-bar i:first-child { background: #d6a38e; }
-.window-bar i:nth-child(2) { background: #d5c392; }
-.window-bar span { margin-left: auto; font: 7px monospace; color: #b8c1b5; }
-.window-code { display: flex; flex-direction: column; gap: 4px; padding: 15px 13px 20px; font: 9px/1.65 Consolas, monospace; color: #dbe7d4; }
-.window-code b { color: #c0b3ed; font-weight: normal; }
-.window-code em { color: #dbb98c; font-style: normal; }
-.code-comment { color: #a6b8a4; margin-bottom: 3px; }
-.tools-badge { position: absolute; right: 21px; bottom: 27px; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid #c4d3b9; border-radius: 50%; background: #d2dfc8; font: 14px monospace; transform: rotate(8deg); }
-.visual-collection { background: #f4e7dd; }
-.collection-tile { position: absolute; border-radius: 6px; }
-.tile-one { display: flex; flex-direction: column; width: 91px; height: 113px; top: 60px; left: calc(50% - 104px); background: #f9f5ed; border: 1px solid #e5d9cd; padding: 15px 10px; font: 39px Georgia, serif; transform: rotate(-9deg); }
-.tile-one > span { margin-top: auto; font-size: 7px; font-family: sans-serif; letter-spacing: 1px; }
-.tile-two { display: grid; place-items: center; width: 82px; height: 85px; top: 48px; left: calc(50% - 7px); background: #daa58c; transform: rotate(11deg); }
-.tile-flower { color: #f7e7d6; font-size: 62px; line-height: 1; }
-.tile-three { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; width: 135px; height: 83px; top: 137px; left: calc(50% - 17px); padding: 15px; background: #e4d6b5; border: 1px solid #d3c29e; transform: rotate(5deg); }
-.tile-three span { font-size: 13px; line-height: 1.7; }
-.tile-three b { font-size: 22px; font-weight: normal; }
-.collection-dot { position: absolute; width: 10px; height: 10px; border-radius: 50%; bottom: 32px; left: 42px; background: #c69073; }
-.project-content { padding: 22px 23px 20px; }
-.project-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 10px; color: var(--muted); }
-.project-meta > span:last-child { border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; font-size: 9px; }
-.project-content h3 { margin: 10px 0; font-size: 21px; font-weight: 550; }
-.project-content p { color: var(--muted); font-size: 12px; line-height: 1.9; margin-bottom: 21px; }
-.project-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line); padding-top: 13px; }
-.project-bottom > span { font-size: 9px; color: var(--muted); letter-spacing: .6px; }
-.round-link { display: grid; place-items: center; width: 37px; height: 37px; border: 1px solid var(--line); border-radius: 50%; font-size: 22px; line-height: 1; transition: background .2s, color .2s, transform .2s; }
-.round-link:hover { color: #fff; background: #7560b8; border-color: #7560b8; transform: rotate(10deg); }
-.section-aside { margin-bottom: 5px; color: var(--muted); font-size: 11px; }
-.notes-list { margin-top: 37px; border-top: 1px solid var(--line); }
-.note-row { display: flex; align-items: center; gap: 28px; padding: 25px 9px 25px 0; border-bottom: 1px solid var(--line); transition: background .2s, padding .2s; }
-.note-row:hover { padding-left: 13px; background: var(--soft-purple); }
-.note-index { align-self: flex-start; margin-top: 6px; font: 11px system-ui, sans-serif; color: var(--muted); }
-.note-category { font-size: 10px; color: var(--muted); letter-spacing: .4px; }
-.note-row h3 { font-size: 18px; font-weight: 500; margin: 5px 0; }
-.note-row p { margin: 0; font-size: 12px; color: var(--muted); }
-.note-arrow { margin-left: auto; padding: 0 13px; font-size: 24px; color: var(--accent); }
-.contact-section { display: flex; align-items: center; gap: 30px; padding: 44px; border-radius: 15px; background: var(--soft-purple); }
-.contact-star { font-size: 73px; line-height: 1; color: var(--accent); }
-.contact-section .section-label { font-size: 10px; margin-bottom: 9px; }
-.contact-section h2 { font-size: 27px; margin-bottom: 9px; }
-.contact-section p:last-child { color: var(--muted); font-size: 12px; margin-bottom: 0; }
-.contact-section .button { margin-left: auto; flex-shrink: 0; }
-.site-footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding: 48px 0 30px; }
-.footer-brand { font: 700 20px system-ui, sans-serif; letter-spacing: -.7px; }
-.site-footer p { font-size: 10px; color: var(--muted); margin: 9px 0 0; }
-.footer-links { display: flex; align-items: center; justify-content: flex-end; gap: 23px; font-size: 10px; }
-.footer-links a:hover, .copy-link:hover { color: var(--accent); }
-.copy-link { border: 0; padding: 0; background: transparent; font-size: inherit; }
-.footer-right { text-align: right; }
-.fallback-examples { padding: 60px 0; border-top: 1px solid var(--line); }
-.fallback-examples article { padding: 20px 0; max-width: 720px; }
-.fallback-examples p { color: var(--muted); }
-.dialog-ready .fallback-examples { display: none; }
-.content-dialog { width: min(620px, calc(100% - 40px)); max-height: calc(100dvh - 60px); padding: 27px 34px 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--bg); color: var(--ink); box-shadow: 0 20px 100px #0002; }
-.content-dialog:not([open]) { display: none; }
-.content-dialog::backdrop { background: #17142180; backdrop-filter: blur(4px); }
-.dialog-topline { display: flex; align-items: center; justify-content: space-between; margin-bottom: 17px; font-size: 11px; color: var(--muted); }
-.dialog-close.icon-button { font-size: 27px; line-height: 1; }
-.content-dialog h2 { font-size: 28px; }
-.dialog-body { color: var(--muted); font-size: 14px; line-height: 2; }
-.dialog-footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 19px; margin-top: 25px; border-top: 1px solid var(--line); }
-.dialog-footer > span { font-size: 10px; color: var(--muted); }
-.toast { position: fixed; z-index: 80; bottom: 24px; left: 50%; max-width: calc(100% - 40px); width: max-content; transform: translate(-50%, 15px); border: 1px solid var(--line); border-radius: 8px; padding: 10px 19px; background: var(--ink); color: var(--bg); opacity: 0; pointer-events: none; font-size: 12px; transition: opacity .2s, transform .2s; }
-.toast.visible { opacity: 1; transform: translate(-50%, 0); }
-@media (min-width: 1600px) { .hero { padding-top: 105px; padding-bottom: 100px; } }
-@media (max-width: 1050px) {
-  .container { width: calc(100% - 64px); }
-  .hero { gap: 40px; padding-top: 68px; padding-bottom: 65px; }
-  h1 { font-size: 48px; }
-  .about-section { gap: 65px; }
-  .site-nav { gap: 24px; }
-  .project-grid { gap: 17px; }
-  .project-content { padding: 19px; }
-  .project-visual { height: 225px; }
-  .contact-section { padding: 32px; gap: 24px; }
-  .contact-star { font-size: 54px; }
-  .contact-section h2 { font-size: 24px; }
+h1 { margin-bottom: 19px; font-size: 32px; line-height: 1.3; font-weight: bold; }
+.profile { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 24px; min-height: 360px; padding-bottom: 12px; }
+.profile-text { text-align: center; font-family: Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif; font-weight: bold; }
+.profile-text p { margin: 16px 0; line-height: 1.4; }
+.position { font-size: 22px; }
+.affiliation { margin-bottom: 19px !important; }
+.portrait { display: flex; flex-direction: column; justify-content: center; align-items: center; justify-self: center; gap: 11px; width: min(280px, 100%); aspect-ratio: 1; border: 1px solid #c4c4c4; background: #f4f4f4; color: #777; font-family: Arial, "Microsoft YaHei", sans-serif; font-size: 13px; }
+.portrait svg { width: 82px; height: 92px; }
+.nav { line-height: 1.9; margin: 10px 0 21px; font-size: 16px; font-weight: bold; text-align: center; }
+.nav span { display: inline-block; margin-right: 7px; white-space: nowrap; }
+.section { margin-bottom: 25px; }
+h2 { margin: 0 0 15px; font-size: 24px; line-height: 1.35; font-weight: bold; }
+h3 { margin: 16px 0 8px; font-size: 19px; line-height: 1.45; font-weight: bold; }
+p { margin-bottom: 12px; }
+ul { padding-left: 28px; margin: 8px 0 13px; }
+li { padding-left: 1px; margin-bottom: 7px; }
+.publications li { margin-bottom: 18px; }
+.placeholder { color: #333; }
+.template-note { font-size: 13px; color: #777; margin-top: 11px; }
+.section-link { font-size: 17px; font-weight: normal; }
+.publication-title { font-weight: normal; }
+.paper-links { color: #666; white-space: nowrap; font-size: 15px; }
+.subpage-header { margin-bottom: 28px; }
+.subpage-header h1 { margin-bottom: 15px; font-size: 31px; }
+.subpage-header p { margin-bottom: 8px; }
+.student-list { max-width: 770px; }
+hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
+.top-rule { margin: 0 0 25px; }
+.skip { position: absolute; top: -80px; left: 10px; background: #fff; padding: 6px; }
+.skip:focus { top: 10px; }
+@media (max-width: 900px) { .page { width: 88%; } }
+@media (max-width: 650px) {
+  body { font-size: 16px; line-height: 1.7; }
+  .page { width: calc(100% - 24px); margin-top: 24px; }
+  .profile { grid-template-columns: 1fr 112px; gap: 20px; min-height: 0; align-items: center; padding-bottom: 10px; }
+  h1 { font-size: 29px; }
+  .portrait { width: 112px; height: 112px; gap: 7px; font-size: 11px; }
+  .portrait svg { width: 56px; height: 64px; }
+  .profile-text { min-width: 0; }
+  .profile-text p { font-size: 14px; overflow-wrap: anywhere; }
+  .profile-text .position { font-size: 16px; }
+  .nav { font-size: 15px; margin-bottom: 22px; }
+  .nav span { margin-right: 6px; }
+  h2 { font-size: 23px; }
+  .section-link { font-size: 15px; }
+  ul { padding-left: 22px; }
+  .paper-links { white-space: normal; }
 }
-@media (max-width: 800px) {
-  .container { width: calc(100% - 40px); }
-  .header-inner { min-height: 72px; gap: 16px; }
-  .brand { font-size: 18px; }
-  .site-nav { gap: 18px; }
-  .header-actions { gap: 6px; }
-  .header-github { display: none; }
-  .hero { gap: 32px; padding-top: 56px; padding-bottom: 55px; }
-  h1 { font-size: 40px; letter-spacing: -1.8px; }
-  .hero-description { font-size: 13px; }
-  .hero-actions { gap: 18px; }
-  .hero-actions .button { gap: 16px; padding-inline: 16px; font-size: 12px; }
-  .hero-signoff { font-size: 10px; margin-top: 28px; }
-  .art-sticker { right: -7px; padding: 7px 10px; font-size: 10px; }
-  .art-topline, .art-bottomline { padding-inline: 17px; font-size: 9px; }
-  .values-strip { gap: 12px; }
-  .values-strip small { margin-left: 5px; font-size: 8px; letter-spacing: .8px; }
-  .values-strip > span:not(.strip-star) { font-size: 15px; }
-  .section { padding-top: 66px; padding-bottom: 66px; }
-  h2 { font-size: 29px; }
-  .about-section { gap: 35px; grid-template-columns: 1.1fr 1fr; }
-  .now-card { padding: 22px; }
-  .now-card h3 { font-size: 17px; }
-  .project-grid { gap: 14px; }
-  .project-visual { height: 195px; }
-  .paper { transform: scale(.8) rotate(5deg); top: 35px; }
-  .paper-back { transform: scale(.8) rotate(-13deg) translate(-10px, 0); }
-  .mini-window { left: 5%; right: 5%; top: 45px; }
-  .window-code { font-size: 8px; padding: 12px 9px; }
-  .tools-badge { bottom: 13px; right: 8px; width: 35px; height: 35px; font-size: 11px; }
-  .tile-one { transform: scale(.8) rotate(-9deg); left: calc(50% - 94px); top: 42px; }
-  .tile-two { transform: scale(.8) rotate(11deg); left: calc(50% - 14px); top: 40px; }
-  .tile-three { transform: scale(.8) rotate(5deg); left: calc(50% - 26px); top: 105px; }
-  .project-content { padding: 17px 14px 13px; }
-  .project-content h3 { font-size: 18px; }
-  .project-content p { font-size: 11px; min-height: 63px; }
-  .project-bottom > span { font-size: 8px; letter-spacing: 0; }
-  .contact-star { display: none; }
-  .contact-section { gap: 20px; }
-  .contact-section .button { padding-inline: 16px; gap: 15px; font-size: 12px; }
-}
-@media (max-width: 600px) {
-  html { scroll-padding-top: 92px; }
-  .header-inner { position: relative; flex-wrap: wrap; padding: 14px 0; min-height: 72px; }
-  .brand { font-size: 18px; }
-  .brand-mark { width: 31px; height: 31px; font-size: 29px; border-radius: 9px; }
-  .header-actions { margin-left: auto; gap: 5px; }
-  .site-nav { order: 3; flex-basis: 100%; justify-content: space-between; margin: 0; }
-  .site-nav a { padding: 9px 12px; font-size: 13px; }
-  .site-nav a.active::after { bottom: 1px; }
-  [data-js="true"] .menu-toggle { display: inline-flex; }
-  [data-js="true"] .site-nav { display: none; }
-  [data-js="true"] .site-nav.is-open { display: flex; padding-top: 5px; }
-  .hero { grid-template-columns: 1fr; gap: 43px; padding-top: 41px; padding-bottom: 43px; }
-  .eyebrow { margin-bottom: 19px; font-size: 11px; }
-  h1 { font-size: clamp(38px, 10.5vw, 51px); margin-bottom: 21px; line-height: 1.3; letter-spacing: -1.5px; }
-  .hero-description { font-size: 13px; line-height: 2; margin-bottom: 25px; }
-  .hero-actions { gap: 25px; }
-  .hero-actions .button { font-size: 13px; padding: 12px 20px; gap: 25px; }
-  .hero-signoff { margin-top: 24px; }
-  .hero-art { width: min(100% - 15px, 375px); justify-self: center; transform: rotate(1.5deg); }
-  .art-topline, .art-bottomline { padding-inline: 20px; }
-  .art-sticker { right: -13px; bottom: 40px; }
-  .values-strip { flex-wrap: wrap; justify-content: center; gap: 17px; padding: 22px 0; }
-  .values-strip > span:not(.strip-star) { font-size: 12px; }
-  .values-strip small { display: none; }
-  .strip-star { font-size: 12px; }
-  .section { padding-top: 53px; padding-bottom: 53px; }
-  .section-label { margin-bottom: 15px; font-size: 10px; }
-  h2 { font-size: 27px; line-height: 1.5; margin-bottom: 20px; letter-spacing: -.8px; }
-  .about-section { grid-template-columns: 1fr; gap: 32px; }
-  .about-copy > p:not(.section-label) { font-size: 13px; }
-  .interest-tags { gap: 7px; margin-top: 22px; }
-  .interest-tags span { font-size: 10px; padding-inline: 9px; }
-  .now-card { padding: 24px 26px 19px; }
-  .now-illustration { padding-top: 9px; }
-  .now-card h3 { font-size: 19px; }
-  .section-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
-  .section-heading .text-link { margin: 0; }
-  .section-intro { font-size: 12px; margin: 15px 0 27px; }
-  .project-grid { grid-template-columns: 1fr; gap: 24px; }
-  .project-visual { height: 240px; }
-  .paper { transform: rotate(5deg); top: 51px; }
-  .paper-back { transform: rotate(-13deg) translate(-10px, 0); }
-  .mini-window { left: 14%; right: 14%; top: 54px; }
-  .window-code { font-size: 10px; padding: 15px 13px 20px; }
-  .tools-badge { bottom: 25px; right: 24px; width: 48px; height: 48px; font-size: 14px; }
-  .tile-one { transform: rotate(-9deg); left: calc(50% - 104px); top: 60px; }
-  .tile-two { transform: rotate(11deg); left: calc(50% - 7px); top: 48px; }
-  .tile-three { transform: rotate(5deg); left: calc(50% - 17px); top: 137px; }
-  .project-content { padding: 21px 23px 18px; }
-  .project-content h3 { font-size: 21px; }
-  .project-content p { font-size: 12px; min-height: 0; }
-  .project-bottom > span { font-size: 9px; }
-  .section-aside { font-size: 11px; }
-  .notes-list { margin-top: 24px; }
-  .note-row { gap: 16px; padding: 22px 0; }
-  .note-row h3 { font-size: 16px; line-height: 1.65; }
-  .note-row p { font-size: 11px; }
-  .note-arrow { font-size: 22px; padding: 0 5px; }
-  .note-category { font-size: 9px; }
-  .contact-section { align-items: flex-start; flex-direction: column; padding: 29px 24px; gap: 23px; }
-  .contact-section h2 { font-size: 23px; }
-  .contact-section .section-label { font-size: 9px; letter-spacing: .4px; }
-  .contact-section .button { margin-left: 0; font-size: 13px; padding-inline: 19px; gap: 23px; }
-  .site-footer { align-items: flex-start; flex-direction: column; gap: 22px; padding-top: 34px; }
-  .footer-right { text-align: left; }
-  .footer-links { justify-content: flex-start; gap: 22px; }
-  .content-dialog { padding: 18px 23px 20px; }
-  .content-dialog h2 { font-size: 23px; }
-  .dialog-footer { flex-wrap: wrap; gap: 9px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
-}
-
+@media (max-width: 360px) { .profile { gap: 12px; grid-template-columns: 1fr 88px; } .portrait { width: 88px; height: 88px; font-size: 9px; } h1 { font-size: 25px; } }
+@media print { body { font-size: 12pt; } .page { width: 100%; margin: 0; } .nav, .skip { display: none; } .section { break-inside: avoid; } a { color: #111; } }
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要内容</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="sjrGCkym 首页">
-        <span class="brand-mark" aria-hidden="true">s<span>↗</span></span>
-        <span>sjrGCkym<span class="brand-dot">.</span></span>
-      </a>
-      <nav class="site-nav" id="site-nav" aria-label="主导航">
-        <a href="#home" class="active" aria-current="location">首页</a>
-        <a href="#about">关于</a>
-        <a href="#projects">项目</a>
-        <a href="#notes">手记</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button theme-toggle" type="button" aria-label="切换到深色主题" title="切换主题" hidden>
-          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.4 14A8.6 8.6 0 0 1 10 3.6 8.6 8.6 0 1 0 20.4 14Z"/></svg>
-          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
-        </button>
-        <a class="header-github" href="https://github.com/sjrGCkym" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-        <button class="icon-button menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="site-nav" aria-expanded="false" hidden>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-      </div>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <main class="page" id="main">
+  <!-- 顶部个人信息：替换为你的姓名、职位、机构和联系方式。 -->
+  <header class="profile">
+    <div class="profile-text">
+      <h1>sjrGCkym</h1>
+      <p class="position">姓名 / 职称或身份：<span class="placeholder">待填写</span></p>
+      <p class="affiliation">院系 / 研究机构：<span class="placeholder">待填写</span><br>学校 / 单位：<span class="placeholder">待填写</span></p>
+      <p>办公室：<span class="placeholder">待填写</span><br>通信地址：<span class="placeholder">待填写</span><br>邮箱：<span class="placeholder">待填写</span><br>GitHub：<a href="https://github.com/sjrGCkym">sjrGCkym</a></p>
+    </div>
+    <!-- 有照片后，可将整个 portrait 占位块替换为 img，并设置相同宽高。 -->
+    <div class="portrait" role="img" aria-label="个人照片待添加">
+      <svg viewBox="0 0 82 92" aria-hidden="true"><circle cx="41" cy="26" r="20" fill="#c7c7c7"/><path d="M7 90v-12c0-20 15-32 34-32s34 12 34 32v12" fill="#c7c7c7"/></svg>
+      <span>个人照片 · 待添加</span>
     </div>
   </header>
-
-  <main id="main">
-    <section class="hero container" id="home" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> 一个属于我的小小角落</p>
-        <h1 id="hero-title">保持好奇，<br><span>让想法发生。</span></h1>
-        <p class="hero-description">记录学习，打磨作品，收集日常里的灵感。<br class="desktop-break">欢迎来到我的个人空间，随意逛逛。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">看看我的项目 <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="#about">了解更多 <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero-signoff"><span class="status-dot" aria-hidden="true"></span> 给想法一点空间，给生活一点留白。</div>
-      </div>
-
-      <div class="hero-art" aria-label="抽象插画：紫色轨道、橙色太阳和绿色小山，象征好奇与探索" role="img">
-        <div class="art-topline"><span><span class="art-dot"></span> 灵感观测站</span><span>NO. 001</span></div>
-        <svg class="orbital-art" viewBox="0 0 440 355" fill="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="planet-fill" x1="123" y1="63" x2="296" y2="255" gradientUnits="userSpaceOnUse"><stop stop-color="#b9aff8"/><stop offset="1" stop-color="#7762d8"/></linearGradient>
-            <clipPath id="planet-clip"><circle cx="222" cy="167" r="99"/></clipPath>
-            <pattern id="art-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#27282a" stroke-opacity=".065" stroke-width="1"/></pattern>
-          </defs>
-          <path fill="url(#art-grid)" d="M20 8h400v324H20z"/>
-          <path d="M40 282H401M57 295V42" stroke="#393739" stroke-opacity=".17"/>
-          <path d="M57 42l-3 7m3-7 3 7m341 233-7-3m7 3-7 3" stroke="#393739" stroke-opacity=".4"/>
-          <circle cx="222" cy="167" r="99" fill="url(#planet-fill)"/>
-          <g clip-path="url(#planet-clip)" stroke="#e0dbff" stroke-opacity=".5">
-            <ellipse cx="222" cy="167" rx="39" ry="99" transform="rotate(-28 222 167)"/>
-            <ellipse cx="222" cy="167" rx="71" ry="99" transform="rotate(-28 222 167)"/>
-            <ellipse cx="222" cy="167" rx="99" ry="29" transform="rotate(-28 222 167)"/>
-            <ellipse cx="222" cy="167" rx="99" ry="60" transform="rotate(-28 222 167)"/>
-            <path d="M170 73l103 187M136 214l172-93"/>
-          </g>
-          <ellipse cx="222" cy="171" rx="164" ry="45" transform="rotate(-28 222 171)" stroke="#37323f" stroke-width="1.3"/>
-          <path d="M366 95c13 5 17 13 12 24-12 24-58 55-116 86-59 31-117 48-151 44" stroke="#f5f2ec" stroke-width="3"/>
-          <circle cx="349" cy="101" r="23" fill="#f2a27e"/>
-          <circle cx="341" cy="94" r="7" fill="#ffd5b6" fill-opacity=".65"/>
-          <path d="m99 67 4-12 4 12 12 4-12 4-4 12-4-12-12-4z" fill="#7863c8"/>
-          <path d="m347 234 3-9 3 9 9 3-9 3-3 9-3-9-9-3z" fill="#39333f"/>
-          <path d="m163 298 34-67 34 67z" fill="#c7d6b5"/>
-          <path d="m217 298 23-46 23 46z" fill="#a9be92"/>
-          <path d="M126 298h172" stroke="#393739" stroke-opacity=".3"/>
-          <circle cx="96" cy="216" r="5" fill="#39333f"/>
-          <path d="M278 37h18m-9-9v18" stroke="#8c8992"/>
-          <text x="66" y="315" fill="#8c8992" font-size="9" font-family="monospace">想象力，没有边界。</text>
-        </svg>
-        <div class="art-bottomline"><span>持续探索 · 慢慢生长</span><span aria-hidden="true">↗</span></div>
-        <div class="art-sticker"><span aria-hidden="true">✦</span> 灵感正在发生</div>
-      </div>
-    </section>
-
-    <div class="values-strip container" aria-label="学习、创造、记录、分享">
-      <span>学习 <small>LEARN</small></span><span class="strip-star" aria-hidden="true">✳</span>
-      <span>创造 <small>CREATE</small></span><span class="strip-star" aria-hidden="true">✳</span>
-      <span>记录 <small>RECORD</small></span><span class="strip-star" aria-hidden="true">✳</span>
-      <span>分享 <small>SHARE</small></span>
-    </div>
-
-    <!-- 关于：将这里的介绍、方向和标签替换成自己的内容。 -->
-    <section class="section container about-section" id="about" aria-labelledby="about-title">
-      <div class="about-copy">
-        <p class="section-label"><span>01</span> 关于这个空间</p>
-        <h2 id="about-title">不急着抵达，<br>享受探索的过程。</h2>
-        <p>你好，我是 <strong>sjrGCkym</strong>。这里是我的个人主页，也是一个可以慢慢生长的数字花园。</p>
-        <p>我希望把学到的知识、动手做的小东西，以及值得记下的片刻，都整理在这里。每一次记录，都是和未来的自己打个招呼。</p>
-        <div class="interest-tags" aria-label="关注的主题"><span>⌘ 技术与实践</span><span>✎ 学习与记录</span><span>✳ 日常与灵感</span></div>
-      </div>
-      <aside class="now-card">
-        <div class="now-heading"><span class="status-dot" aria-hidden="true"></span> 此刻，正在生长 <span aria-hidden="true">↗</span></div>
-        <div class="now-illustration" aria-hidden="true"><svg width="136" height="124" viewBox="0 0 136 124" fill="none"><path d="M67 95V36" stroke="#3f5243" stroke-width="2"/><path d="M67 63C36 64 26 46 29 27c26-1 41 12 38 36Z" fill="#95b19b"/><path d="M68 47c1-27 18-40 41-37 1 25-14 40-41 37Z" fill="#b4c9a1"/><path d="M68 82c6-26 22-35 44-29-3 24-19 35-44 29Z" fill="#718f7a"/><path d="m49 95 4 23h30l5-23H49Z" fill="#d6bca3"/><path d="M44 94h49" stroke="#3f5243" stroke-width="2"/><path d="m16 81 3-8 3 8 8 3-8 3-3 8-3-8-8-3z" fill="#98ac86"/><circle cx="114" cy="106" r="3" fill="#95b19b"/></svg></div>
-        <h3>保持学习，慢慢构建。</h3>
-        <p>把一个小想法，变成一个小作品。<br>然后，再开始下一个。</p>
-        <div class="now-footer"><span>小步向前，也是向前</span><span aria-hidden="true">✦</span></div>
-      </aside>
-    </section>
-
-    <!-- 项目：这里的三个项目是可替换的模板示例。 -->
-    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="section-label"><span>02</span> 项目与作品</p><h2 id="projects-title">一些想法，一些实践。</h2></div>
-          <a class="text-link" href="https://github.com/sjrGCkym" target="_blank" rel="noopener noreferrer">逛逛 GitHub <span aria-hidden="true">↗</span></a>
-        </div>
-        <p class="section-intro">从一个念头开始，在动手的过程中找到答案。以下为可替换的示例项目。</p>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-visual visual-notes" aria-hidden="true"><span class="visual-index">PROJECT / 01</span><div class="paper paper-back"></div><div class="paper paper-front"><span class="paper-title">零散的想法，<br>也有自己的形状。</span><span class="paper-line"></span><span class="paper-line short"></span><span class="paper-star">✳</span><span class="paper-page">01 — NOTES</span></div><span class="visual-spark">✦</span></div>
-            <div class="project-content"><div class="project-meta"><span>学习笔记</span><span>示例</span></div><h3>一页之间</h3><p>把零散的知识串起来，让每一次学习都有迹可循。</p><div class="project-bottom"><span>记录 / 整理 / 分享</span><a class="round-link" href="#example-notes" data-dialog="project-notes" aria-label="查看一页之间示例详情"><span aria-hidden="true">↗</span></a></div></div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-tools" aria-hidden="true"><span class="visual-index">PROJECT / 02</span><div class="mini-window"><div class="window-bar"><i></i><i></i><i></i><span>playground</span></div><div class="window-code"><span class="code-comment">// 让想法运行起来</span><span><b>const</b> idea = <em>'好奇心'</em>;</span><span><b>function</b> create() {</span><span>&nbsp;&nbsp;<b>return</b> idea + <em>'行动'</em>;</span><span>}</span></div></div><span class="tools-badge">&lt;/&gt;</span></div>
-            <div class="project-content"><div class="project-meta"><span>工具与实验</span><span>示例</span></div><h3>日常实验室</h3><p>解决一个小问题，试验一个新点子，让日常多一点便利。</p><div class="project-bottom"><span>工具 / 开源 / 实践</span><a class="round-link" href="#example-tools" data-dialog="project-tools" aria-label="查看日常实验室示例详情"><span aria-hidden="true">↗</span></a></div></div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-collection" aria-hidden="true"><span class="visual-index">PROJECT / 03</span><div class="collection-tile tile-one">Aa<span>文字的温度</span></div><div class="collection-tile tile-two"><span class="tile-flower">✳</span></div><div class="collection-tile tile-three"><span>好东西<br>值得留下。</span><b>↗</b></div><span class="collection-dot"></span></div>
-            <div class="project-content"><div class="project-meta"><span>灵感与资源</span><span>示例</span></div><h3>灵感收藏夹</h3><p>收藏好设计、好文章和好工具，留给下一次灵感来访。</p><div class="project-bottom"><span>发现 / 收藏 / 灵感</span><a class="round-link" href="#example-collection" data-dialog="project-collection" aria-label="查看灵感收藏夹示例详情"><span aria-hidden="true">↗</span></a></div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container notes-section" id="notes" aria-labelledby="notes-title">
-      <div class="section-heading"><div><p class="section-label"><span>03</span> 随想与手记</p><h2 id="notes-title">把思考写下来。</h2></div><span class="section-aside">不必完整，也值得记录。</span></div>
-      <div class="notes-list">
-        <a class="note-row" href="#example-garden" data-dialog="note-garden"><span class="note-index">01</span><div><span class="note-category">建站手记 · 示例</span><h3>给自己建一座数字花园</h3><p>从一个简单的主页开始，给内容一个慢慢生长的地方。</p></div><span class="note-arrow" aria-hidden="true">↗</span></a>
-        <a class="note-row" href="#example-learning" data-dialog="note-learning"><span class="note-index">02</span><div><span class="note-category">学习方法 · 示例</span><h3>把学到的东西，变成做出来的东西</h3><p>记录一次小实践，比收藏十篇教程更接近理解。</p></div><span class="note-arrow" aria-hidden="true">↗</span></a>
-        <a class="note-row" href="#example-small" data-dialog="note-small"><span class="note-index">03</span><div><span class="note-category">日常随想 · 示例</span><h3>留一点时间，给那些无用的好奇</h3><p>有些探索没有目的，却能带来意料之外的答案。</p></div><span class="note-arrow" aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-
-    <section class="contact-section container" aria-labelledby="contact-title">
-      <div class="contact-star" aria-hidden="true">✳</div>
-      <div><p class="section-label">下一次灵感，或许来自一次交流</p><h2 id="contact-title">很高兴，在这里遇见你。</h2><p>欢迎看看我的代码，也欢迎带着好奇心再来。</p></div>
-      <a class="button button-primary" href="https://github.com/sjrGCkym" target="_blank" rel="noopener noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a>
-    </section>
-  </main>
-
-  <footer class="site-footer container">
-    <div><a class="footer-brand" href="#home">sjrGCkym<span>.</span></a><p>保持好奇，持续创造。</p></div>
-    <div class="footer-right"><div class="footer-links"><a href="https://github.com/sjrGCkym" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button class="copy-link" type="button" hidden>复制主页链接</button><a href="#home">回到顶部 ↑</a></div><p>© <span id="year">2026</span> sjrGCkym · 用心记录每一步</p></div>
-  </footer>
-
-  <!-- 无 JavaScript 时，示例仍可通过页面锚点阅读。 -->
-  <section class="fallback-examples container" id="examples" aria-labelledby="examples-title">
-    <h2 id="examples-title">模板内容示例</h2>
-    <article id="example-notes"><h3>一页之间</h3><p>这是学习笔记项目的示例。可以在这里介绍你的知识库、课程笔记或阅读记录，说明内容主题与整理方式。请将卡片链接替换成你的真实项目地址。</p></article>
-    <article id="example-tools"><h3>日常实验室</h3><p>这是工具项目的示例。可以写下工具解决的问题、实现思路与使用方法，再添加源码或演示地址。</p></article>
-    <article id="example-collection"><h3>灵感收藏夹</h3><p>这是资源收藏项目的示例。可以整理常用工具、喜欢的设计或优质文章，并写下你推荐它们的理由。</p></article>
-    <article id="example-garden"><h3>给自己建一座数字花园</h3><p>一个个人主页不需要一开始就很复杂。先写一句介绍，放上一个做过的项目，再留下几段学习笔记。内容可以随着时间慢慢增加。</p><p>比起等待所有内容都准备好，先留下一小块可以生长的空间，往往更容易开始。这段文字是示例，你可以换成自己的第一篇建站手记。</p></article>
-    <article id="example-learning"><h3>把学到的东西，变成做出来的东西</h3><p>学习一个新概念时，试着做一个最小的例子。记录目标、过程、遇到的问题，以及最后怎样解决。</p><p>作品不必很大。一段脚本、一张图、一个简单的网页，都可以是理解的起点。这段文字是示例，你可以替换成真实的实践记录。</p></article>
-    <article id="example-small"><h3>留一点时间，给那些无用的好奇</h3><p>偶尔离开熟悉的路径，读一篇不同领域的文章，试一个没有明确用途的工具，或者记下一个突然冒出来的问题。</p><p>这些零散的小发现，也许会在未来的某一天连接起来。这段文字是示例，你可以在这里记录自己的日常观察。</p></article>
+  <nav class="nav" aria-label="学术主页导航">
+  <span>[<a href="./index.html#biography">个人简介</a>]</span>
+  <span>[<a href="./index.html#research">研究方向与招生</a>]</span>
+  <span>[<a href="./index.html#news">新闻动态</a>]</span>
+  <span>[<a href="./index.html#publications">论文</a>]</span>
+  <span>[<a href="./index.html#teaching">教学</a>]</span>
+  <span>[<a href="./students.html">学生</a>]</span>
+  <span>[<a href="./index.html#activities">学术服务</a>]</span>
+</nav>
+  <hr class="top-rule">
+  <section class="section" id="biography" aria-labelledby="biography-title">
+    <h2 id="biography-title">个人简介</h2>
+    <p class="placeholder">个人简介待填写。这里可以介绍当前职位、所在机构、教育背景以及主要研究经历。建议用一至两段文字，按时间顺序简要说明学习与工作经历。</p>
+    <p class="template-note">本页为学术主页模板，标注“待填写”的内容请替换为真实个人资料。</p>
   </section>
-  <dialog class="content-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-topline"><span id="dialog-category">内容示例</span><button class="icon-button dialog-close" type="button" aria-label="关闭详情">×</button></div>
-    <h2 id="dialog-title"></h2><div class="dialog-body"></div>
-    <div class="dialog-footer"><span>这是一段可替换的模板内容。</span><button class="text-link dialog-close" type="button">继续逛逛 <span aria-hidden="true">↗</span></button></div>
-  </dialog>
-  <div class="toast" role="status" aria-live="polite"></div>
-<script>
-/* 纯浏览器脚本：无需 npm、框架或构建步骤。 */
-(() => {
-  'use strict';
-
-  const root = document.documentElement;
-  const themeButton = document.querySelector('.theme-toggle');
-  const colorQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  let savedTheme = null;
-  try { savedTheme = localStorage.getItem('homepage-theme'); } catch { /* 禁用存储时仍可切换主题。 */ }
-  if (savedTheme !== 'light' && savedTheme !== 'dark') savedTheme = null;
-
-  function setTheme(theme) {
-    root.dataset.theme = theme;
-    const label = theme === 'dark' ? '切换到浅色主题' : '切换到深色主题';
-    themeButton.setAttribute('aria-label', label);
-    themeButton.title = label;
-    document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#191a1e' : '#f8f8f4';
-  }
-  setTheme(savedTheme || (colorQuery.matches ? 'dark' : 'light'));
-  themeButton.hidden = false;
-  themeButton.addEventListener('click', () => {
-    savedTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    setTheme(savedTheme);
-    try { localStorage.setItem('homepage-theme', savedTheme); } catch { /* 当前会话内生效。 */ }
-  });
-  if (typeof colorQuery.addEventListener === 'function') {
-    colorQuery.addEventListener('change', event => {
-      if (!savedTheme) setTheme(event.matches ? 'dark' : 'light');
-    });
-  }
-
-  const nav = document.querySelector('.site-nav');
-  const menuButton = document.querySelector('.menu-toggle');
-  const mobileQuery = window.matchMedia('(max-width: 600px)');
-  menuButton.hidden = false;
-  function setMenu(open) {
-    nav.classList.toggle('is-open', open);
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单');
-  }
-  menuButton.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
-  nav.addEventListener('click', event => {
-    if (event.target.closest('a')) setMenu(false);
-  });
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.site-header')) setMenu(false);
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && nav.classList.contains('is-open')) {
-      setMenu(false);
-      menuButton.focus();
-    }
-  });
-  if (typeof mobileQuery.addEventListener === 'function') {
-    mobileQuery.addEventListener('change', () => setMenu(false));
-  }
-  root.dataset.js = 'true';
-
-  const navLinks = Array.from(nav.querySelectorAll('a'));
-  const sections = navLinks.map(link => document.querySelector(link.getAttribute('href')));
-  let scheduled = false;
-  function updateNavigation() {
-    scheduled = false;
-    let active = 0;
-    sections.forEach((section, index) => {
-      if (section.getBoundingClientRect().top <= 170) active = index;
-    });
-    navLinks.forEach((link, index) => {
-      link.classList.toggle('active', index === active);
-      if (index === active) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
-  }
-  window.addEventListener('scroll', () => {
-    if (!scheduled) {
-      scheduled = true;
-      window.requestAnimationFrame(updateNavigation);
-    }
-  }, { passive: true });
-  window.addEventListener('resize', updateNavigation);
-  updateNavigation();
-
-  const dialog = document.querySelector('.content-dialog');
-  if (typeof dialog.showModal === 'function') {
-    root.classList.add('dialog-ready');
-    document.querySelectorAll('[data-dialog]').forEach(link => {
-      link.addEventListener('click', event => {
-        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-        const href = link.getAttribute('href');
-        // 改成真实项目或文章链接后，保留普通链接的跳转行为。
-        if (!href || !href.startsWith('#')) return;
-        const source = document.getElementById(href.slice(1));
-        if (!source) return;
-        event.preventDefault();
-        document.getElementById('dialog-title').textContent = source.querySelector('h3').textContent;
-        document.getElementById('dialog-category').textContent = link.dataset.dialog.startsWith('project-') ? '项目介绍 · 示例' : '随想与手记 · 示例';
-        const body = dialog.querySelector('.dialog-body');
-        body.replaceChildren(...Array.from(source.querySelectorAll('p'), paragraph => paragraph.cloneNode(true)));
-        if (!dialog.open) dialog.showModal();
-        dialog.scrollTop = 0;
-        document.body.classList.add('modal-open');
-      });
-    });
-    // 直接访问示例锚点或在新标签页打开时，也能看到对应详情。
-    function openLinkedExample() {
-      const link = Array.from(document.querySelectorAll('[data-dialog]')).find(item => item.getAttribute('href') === window.location.hash);
-      if (link) link.click();
-    }
-    window.addEventListener('hashchange', openLinkedExample);
-    dialog.querySelectorAll('.dialog-close').forEach(button => button.addEventListener('click', () => dialog.close()));
-    dialog.addEventListener('click', event => {
-      const bounds = dialog.getBoundingClientRect();
-      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
-    });
-    dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
-    openLinkedExample();
-  }
-
-  const copyButton = document.querySelector('.copy-link');
-  const toast = document.querySelector('.toast');
-  let toastTimer;
-  function showToast(message) {
-    clearTimeout(toastTimer);
-    toast.textContent = message;
-    toast.classList.add('visible');
-    toastTimer = setTimeout(() => toast.classList.remove('visible'), 3600);
-  }
-  // 更换用户名或域名时，在 index.html 中同步修改 canonical 地址。
-  const siteURL = document.querySelector('link[rel="canonical"]').href;
-  copyButton.hidden = false;
-  copyButton.addEventListener('click', async () => {
-    let copied = false;
-    if (window.isSecureContext && navigator.clipboard) {
-      try { await navigator.clipboard.writeText(siteURL); copied = true; } catch { /* 尝试兼容模式。 */ }
-    }
-    if (!copied) {
-      const textarea = document.createElement('textarea');
-      textarea.value = siteURL;
-      textarea.setAttribute('readonly', '');
-      textarea.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none;';
-      document.body.append(textarea);
-      textarea.select();
-      try { copied = document.execCommand('copy'); } catch { /* 输出可手动复制的地址。 */ }
-      textarea.remove();
-      copyButton.focus();
-    }
-    showToast(copied ? '主页链接已复制，欢迎分享。' : `请手动复制：${siteURL}`);
-  });
-  document.getElementById('year').textContent = String(new Date().getFullYear());
-})();
-
-</script>
+  <section class="section" id="research" aria-labelledby="research-title">
+    <h2 id="research-title">研究方向与招生</h2>
+    <p class="placeholder">主要研究方向：<strong>研究方向一（待填写）</strong>、<strong>研究方向二（待填写）</strong>和<strong>研究方向三（待填写）</strong>。可补充关注的研究问题、使用的方法与应用领域。</p>
+    <p class="placeholder">招生与合作信息待填写。可补充合作机会、招生要求和联系方式；没有相关信息时可以删除此段。</p>
+  </section>
+  <section class="section" id="news" aria-labelledby="news-title">
+    <h2 id="news-title">新闻动态</h2>
+    <ul><li><span class="placeholder">日期（待填写）：学术新闻或近期进展（待填写）。</span></li><li><span class="placeholder">日期（待填写）：学术新闻或近期进展（待填写）。</span></li><li><span class="placeholder">日期（待填写）：学术新闻或近期进展（待填写）。</span></li></ul>
+  </section>
+  <section class="section" id="publications" aria-labelledby="publications-title">
+    <h2 id="publications-title">代表性论文 <span class="section-link">（<a href="./publications.html">全部论文</a>）</span></h2>
+    <ul class="publications">
+  <li><span class="placeholder">作者列表（待填写）</span>，“<span class="publication-title">论文题目一（待填写）</span>”，<em>期刊或会议名称（待填写）</em>，年份、卷期与页码（待填写）。<br><span class="paper-links">[PDF 待添加] &nbsp; [代码待添加]</span></li>
+  <li><span class="placeholder">作者列表（待填写）</span>，“<span class="publication-title">论文题目二（待填写）</span>”，<em>期刊或会议名称（待填写）</em>，年份、卷期与页码（待填写）。<br><span class="paper-links">[PDF 待添加] &nbsp; [代码待添加]</span></li>
+  <li><span class="placeholder">作者列表（待填写）</span>，“<span class="publication-title">论文题目三（待填写）</span>”，<em>期刊或会议名称（待填写）</em>，年份、卷期与页码（待填写）。<br><span class="paper-links">[PDF 待添加] &nbsp; [代码待添加]</span></li>
+</ul>
+  </section>
+  <section class="section" id="teaching" aria-labelledby="teaching-title">
+    <h2 id="teaching-title">教学</h2>
+    <ul><li><span class="placeholder">学期（待填写）：课程名称（课程编号待填写）。</span></li><li><span class="placeholder">学期（待填写）：课程名称（课程编号待填写）。</span></li><li><span class="placeholder">学期（待填写）：课程名称（课程编号待填写）。</span></li></ul>
+  </section>
+  <section class="section" id="activities" aria-labelledby="activities-title">
+    <h2 id="activities-title">学术服务</h2>
+    <h3>期刊编辑</h3><ul><li class="placeholder">期刊名称、编辑职务与任职时间：待填写。</li></ul>
+    <h3>会议组织</h3><ul><li class="placeholder">会议名称、担任职务与年份：待填写。</li></ul>
+    <h3>程序委员会</h3><p class="placeholder">会议名称及服务年份：待填写。</p>
+  </section>
+    <hr>
+  </main>
 </body>
 </html>

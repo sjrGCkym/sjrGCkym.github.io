@@ -1,21 +1,32 @@
-# sjrGCkym 的中文个人主页
+# 中文学术主页模板
 
-主页地址：https://sjrgckym.github.io/
+主页：https://sjrgckym.github.io/
 
-## 发布方式
+使用传统学术个人主页的结构：顶部个人信息与照片、方括号文字导航、个人简介、研究方向与招生、新闻、代表性论文、教学、学术服务。全部论文和学生各有独立页面。界面为中文，未提供的个人资料明确标注为“待填写”，没有虚构研究经历或论文。
 
-本仓库使用 GitHub Pages，来源为 **master 分支 / (root)**。将更改提交到 master 后会自动发布。根目录的空 .nojekyll 文件用于跳过 Jekyll 构建。
+## 文件
 
-## 修改主页
+- index.html：主页，样式已内嵌，编辑此文件即可修改文案和布局。
+- publications.html：全部论文。
+- students.html：学生页面。
+- .nojekyll：空文件，用于跳过 Jekyll 构建。
 
-部署版是一个独立的 index.html 文件，包含完整的中文文案、CSS 样式、JavaScript 交互和 SVG 插画，无第三方依赖，无需构建。
+无第三方依赖，无需安装或构建。下载后双击 index.html 即可查看。
 
-- 修改文案：编辑 index.html 中的 HTML 内容。项目、文章和个人介绍为可替换示例。
-- 修改样式：编辑文件顶部的 style 标签，主要颜色位于 :root 的 CSS 变量中。
-- 修改交互：编辑文件底部的 script 标签。
-- 示例详情：编辑 fallback-examples 区域的文章正文；卡片的 href 也可改为真实网址。
-- 更换账号：同步调整 GitHub 链接、canonical 和 og:url。
+## 修改
 
-支持手机导航、深浅主题、示例详情和主页链接复制。下载 index.html 后可直接双击预览。
+1. 将顶部 sjrGCkym 和“待填写”替换为真实的姓名、单位、职务、邮箱、简介及其他资料。
+2. 照片位置：替换 index.html 的 portrait 占位块为 img；照片也可以使用 data URL 内嵌，以便单文件发布。
+3. 用真实论文替换论文占位条目，将 PDF、代码等占位文字改成实际链接。
+4. 同步更新 publications.html 和 students.html。无需某栏目时，可删除对应正文和导航链接。
+5. 三个页面都包含相同的 style 样式块；修改公共样式时，请同步修改各页。
+
+## GitHub Pages
+
+本仓库现有发布来源为 **master / (root)**。将文件上传到仓库根目录并提交到 master，GitHub Pages 会自动发布。
+
+新仓库可以使用 main / (root)，仓库名应匹配拥有者的用户名，例如 sjrgckym.github.io。
+
+页面结构参考：https://www.cs.sjtu.edu.cn/~jinhaiming/
 
 [GitHub Pages 官方发布设置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
