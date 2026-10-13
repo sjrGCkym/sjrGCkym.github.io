@@ -1,0 +1,15 @@
+/* 浅橙金背景：柔和的暖色渐变与橙金、蜜桃色柔光。 */
+body {
+  background-color: #fff7e8;
+  background-image:
+    radial-gradient(ellipse 680px 420px at 12% 0,
+      rgba(255, 190, 80, .30), transparent 72%),
+    radial-gradient(ellipse 620px 480px at 90% 440px,
+      rgba(255, 186, 145, .22), transparent 72%),
+    linear-gradient(145deg, #fff8ed 0%, #fff0d5 52%, #fff7e8 100%);
+  background-size: 100% 1100px, 100% 1100px, 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.skip { background: #fff7e8; }
+@media print { body { background: #fff; } }
