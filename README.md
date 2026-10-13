@@ -27,6 +27,4 @@
 
 新仓库可以使用 main / (root)，仓库名应匹配拥有者的用户名，例如 sjrgckym.github.io。
 
-页面结构参考：https://www.cs.sjtu.edu.cn/~jinhaiming/
-
 [GitHub Pages 官方发布设置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
