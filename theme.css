@@ -9,6 +9,16 @@
 body, .profile-text {
   font-family: "FZ YanSong SC", "Songti SC", SimSun, "Noto Serif CJK SC", "Times New Roman", serif;
 }
+body, h1, h2, h3, h4, h5, h6, .profile-text, .nav, strong, b {
+  font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6, strong, b, .nav, .nav a, .nav a:visited {
+  color: #245f70;
+}
+.profile-text, .profile-text h1, .profile-text a, .profile-text a:visited {
+  color: #82512f;
+}
+.profile-text a:hover, .nav a:hover { color: #a45628; }
 body {
   background-color: #fff7e8;
   background-image:
