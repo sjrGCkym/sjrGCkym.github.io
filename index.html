@@ -6,6 +6,8 @@
   <meta name="description" content="sjrGCkym 的中文学术主页：个人简介、研究方向、论文、教学与学术服务。">
   <title>学术主页 · sjrGCkym</title>
   <link rel="canonical" href="https://sjrgckym.github.io/">
+  <link rel="alternate" hreflang="zh-CN" href="https://sjrgckym.github.io/">
+  <link rel="alternate" hreflang="en" href="https://sjrgckym.github.io/en.html">
   <style>
 * { box-sizing: border-box; }
 html { scroll-padding-top: 16px; }
@@ -64,12 +66,19 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
 }
 @media (max-width: 360px) { .profile { gap: 12px; grid-template-columns: minmax(0, 1fr) 88px; } .portrait { width: 88px; height: auto; } h1 { font-size: 25px; } }
 @media print { body { font-size: 12pt; } .page { width: 100%; margin: 0; } .nav, .skip { display: none; } .section { break-inside: avoid; } a { color: #111; } }
+
+.language-switch { margin: 0 0 18px; text-align: right; font-size: 15px; line-height: 1.6; color: #82512f; }
+.language-switch a, .language-switch a:visited { color: #245f70; }
+.language-switch a:hover { color: #a45628; }
+@media print { .language-switch { display: none; } }
 </style>
   <link rel="stylesheet" href="theme.css">
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
-  <main class="page" id="main">
+  <main class="page" id="main"><nav class="language-switch" aria-label="语言">
+    <span lang="zh-CN" aria-current="page">中文</span> &nbsp;|&nbsp; <a href="./en.html" lang="en" hreflang="en">English</a>
+  </nav>
   <!-- 顶部个人信息：替换为你的姓名、职位、机构和联系方式。 -->
   <header class="profile">
     <div class="profile-text">
