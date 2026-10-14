@@ -6,6 +6,8 @@
   <meta name="description" content="sjrGCkym 的中文学术主页：个人简介、研究方向、论文、教学与学术服务。">
   <title>网络安全数学基础 · sjrGCkym</title>
   <link rel="canonical" href="https://sjrgckym.github.io/courses/36000407/index.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://sjrgckym.github.io/courses/36000407/index.html">
+  <link rel="alternate" hreflang="en" href="https://sjrgckym.github.io/courses/36000407/en.html">
   <style>
 * { box-sizing: border-box; }
 html { scroll-padding-top: 16px; }
@@ -64,12 +66,19 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
 }
 @media (max-width: 360px) { .profile { gap: 12px; grid-template-columns: minmax(0, 1fr) 88px; } .portrait { width: 88px; height: auto; } h1 { font-size: 25px; } }
 @media print { body { font-size: 12pt; } .page { width: 100%; margin: 0; } .nav, .skip { display: none; } .section { break-inside: avoid; } a { color: #111; } }
+
+.language-switch { margin: 0 0 18px; text-align: right; font-size: 15px; line-height: 1.6; color: #82512f; }
+.language-switch a, .language-switch a:visited { color: #245f70; }
+.language-switch a:hover { color: #a45628; }
+@media print { .language-switch { display: none; } }
 </style>
   <link rel="stylesheet" href="../../theme.css">
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
-  <main class="page" id="main">
+  <main class="page" id="main"><nav class="language-switch" aria-label="语言">
+    <span lang="zh-CN" aria-current="page">中文</span> &nbsp;|&nbsp; <a href="./en.html" lang="en" hreflang="en">English</a>
+  </nav>
   <header class="subpage-header">
     <h1>网络安全数学基础</h1>
     <p>2026秋季学期 · <strong>36000407</strong> · 本硕课程</p>
@@ -94,7 +103,7 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
     const list = window.document.getElementById('materials-list');
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 10000);
-    status.textContent = '正在加载课件列表…';
+    status.textContent = "正在加载课件列表…";
     try {
       const response = await fetch('https://api.github.com/repos/sjrGCkym/sjrGCkym.github.io/contents/courses/36000407?ref=master', {
         headers: { Accept: 'application/vnd.github+json' },
@@ -114,9 +123,9 @@ hr { margin: 30px 0 0; height: 1px; border: 0; background: #aaa; }
         item.appendChild(link);
         list.appendChild(item);
       }
-      status.textContent = files.length ? '点击文件名下载课件。' : '课件尚未上传。';
+      status.textContent = files.length ? "点击文件名下载课件。" : "课件尚未上传。";
     } catch {
-      status.textContent = '课件列表暂时无法加载，请通过“查看课件目录”访问资料。';
+      status.textContent = "课件列表暂时无法加载，请通过“查看课件目录”访问资料。";
     } finally {
       clearTimeout(timeout);
     }
