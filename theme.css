@@ -1,4 +1,14 @@
 /* 浅橙金背景：柔和的暖色渐变与橙金、蜜桃色柔光。 */
+@font-face {
+  font-family: "FZ YanSong SC";
+  src: url("./fz-yansong-sc.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body, .profile-text {
+  font-family: "FZ YanSong SC", "Songti SC", SimSun, "Noto Serif CJK SC", "Times New Roman", serif;
+}
 body {
   background-color: #fff7e8;
   background-image:
